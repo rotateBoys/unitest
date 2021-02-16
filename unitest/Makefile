@@ -40,6 +40,10 @@ tests_run:	$(OBJ)
 	@$(CC) -o $(EXECTESTS) $(TESTS) $(INC) $(UNITFLAGS)
 	./$(EXECTESTS)
 
+gcovr:	tests_run
+	gcovr --exclude $(EXECTESTS)
+	gcovr --exclude $(EXECTESTS) --branches
+
 %.o:    %.c
 	@$(CC)  $(CFLAGS) -c $< -o $@ && \
 	printf "["$(GREEN)"OK"$(DEFAULT)"] "$(TEAL)$<$(DEFAULT)" -----> "$(GREEN)$@$(DEFAULT)$(END) || \

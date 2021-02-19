@@ -9,6 +9,7 @@
 #include "../my_strcpy.c"
 
 int my_strlen(char const *str);
+
 char *my_strcpy(char *dest, char const *src);
 
 Test(my_strcpy, test_my_strcpy)

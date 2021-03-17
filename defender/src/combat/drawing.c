@@ -14,5 +14,10 @@ void draw_c(adventure *adv, button *ptr)
     //sfRenderWindow_drawText(adv->window, ptr->c_text[0], NULL);
     //sfRenderWindow_drawText(adv->window, ptr->c_text[1], NULL);
     sfRenderWindow_drawSprite(adv->window, adv->point_s, NULL);
-    sfRenderWindow_display(adv->window);
+}
+
+
+void move3(adventure *adv, float *x, float *y)
+{
+    *x += 0.52;
 }

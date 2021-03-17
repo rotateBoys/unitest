@@ -9,7 +9,8 @@
 
 int map2_body(adventure *adv, button *ptr)
 {
-    float x, y;
+    int i = 0;
+    float x, y, w = 0, z = 50, n = 0, m = 480.0, k = 260.0, p = 150.0;
     sfEvent event;
 
     set_map2(adv, ptr);
@@ -24,9 +25,20 @@ int map2_body(adventure *adv, button *ptr)
                 sfRenderWindow_close(adv->window);
             }
             sfSprite_setPosition(adv->point_s, (sfVector2f){x, y});
-            //mission_cursor(x, y, adv, ptr);
-            m2_draw(adv, ptr);
         }
+        //mission_cursor(x, y, adv, ptr);
+
+        m2_draw(adv, ptr);
+        if (n < 965.0) {
+            running(adv, &i, n, z);
+            running(adv, &i, n, m);
+        } if (p < 965.0)
+              running(adv, &i, p, k);
+        move2(adv, &n, &m);
+        move2(adv, &p, &m);
+        //move3(adv, &w, &z);
+        //running(adv, adv->time);
+        sfRenderWindow_display(adv->window);
     }
     return (0);
 }

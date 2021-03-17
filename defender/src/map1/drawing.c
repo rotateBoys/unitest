@@ -14,5 +14,4 @@ void m_draw(adventure *adv, button *ptr)
     //sfRenderWindow_drawText(adv->window, ptr->m_text[0], NULL);
     //sfRenderWindow_drawText(adv->window, ptr->m_text[1], NULL);
     sfRenderWindow_drawSprite(adv->window, adv->point_s, NULL);
-    sfRenderWindow_display(adv->window);
 }

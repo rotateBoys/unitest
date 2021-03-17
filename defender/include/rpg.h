@@ -18,9 +18,19 @@
 #include <unistd.h>
 #include <stdio.h>
 
+typedef struct perso
+{
+    sfSprite *s;
+    sfTexture *t;
+} perso;
+
 typedef struct t_adventure adventure;
 struct t_adventure
 {
+    perso *perso1;
+    perso *perso2;
+    sfClock *clock;
+    sfTime time;
     sfSprite *back_s[8];
     sfTexture *back_t[8];
     sfSprite *bouton_s[10];
@@ -164,6 +174,12 @@ int press(adventure *g, sfVector2f p, int x, int y);
 void play_choice(adventure *adv, button *ptr);
 void set_map2(adventure *adv, button *ptr);
 
-
+void draw_img(adventure com, char *path, sfVector2f scale, sfVector2f pos);
+char **image_homme(void);
+void running(adventure *com, int *i, float x, float y);
+void move(adventure *com, float *x, float *y);
+void move1(adventure *com, float *x, float *y);
+void move2(adventure *com, float *x, float *y);
+void move3(adventure *com, float *x, float *y);
 
 #endif /*!MY_RPG*/

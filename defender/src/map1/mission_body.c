@@ -9,8 +9,10 @@
 
 int map1_body(adventure *adv, button *ptr)
 {
-    float x, y;
+    int i = 0;
+    float x, y, w = 82, z = 0, n = 0, m = 302.0;
     sfEvent event;
+    char **file = image_homme();
 
     set_mission(adv, ptr);
     //set_m_text1(ptr);
@@ -24,9 +26,14 @@ int map1_body(adventure *adv, button *ptr)
                 sfRenderWindow_close(adv->window);
             }
             sfSprite_setPosition(adv->point_s, (sfVector2f){x, y});
-            //mission_cursor(x, y, adv, ptr);
-            m_draw(adv, ptr);
-        }
+        } m_draw(adv, ptr);
+        if (w < 965.0)
+            running(adv, &i, w, z);
+        if (n < 965.0)
+            running(adv, &i, n, m);
+        move(adv, &n, &m);
+        move1(adv, &w, &z);
+        sfRenderWindow_display(adv->window);
     }
     return (0);
 }

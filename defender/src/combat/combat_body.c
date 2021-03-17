@@ -9,7 +9,8 @@
 
 int combat_body(adventure *adv, button *ptr)
 {
-    float x, y;
+    int i = 0;
+    float x, y, w = 0, z = 50, n = 0, m = 480.0;// k = 260.0, p = 150.0;
     sfEvent event;
 
     set_combat(adv, ptr);
@@ -24,9 +25,17 @@ int combat_body(adventure *adv, button *ptr)
                 sfRenderWindow_close(adv->window);
             }
             sfSprite_setPosition(adv->point_s, (sfVector2f){x, y});
-      //      combat_cursor(x, y, adv, ptr);
-            draw_c(adv, ptr);
+            //      combat_cursor(x, y, adv, ptr);
         }
+        draw_c(adv, ptr);
+        /* if (w < 965.0) { */
+        /*     running(adv, &i, w, z); */
+        /*     //running(adv, &i, n, m); */
+        /* } if (n < 965.0) */
+        /*       running(adv, &i, n, m); */
+        /* //move3(adv, &w, &z); */
+        /* //move2(adv, &n, &m); */
+        /* sfRenderWindow_display(adv->window); */
     }
     return (0);
 }

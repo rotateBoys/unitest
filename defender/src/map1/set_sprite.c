@@ -67,16 +67,16 @@ void set_pause(adventure *adv, button *ptr)
     adv->tower_s[5] = sfSprite_create();
     sfSprite_setTexture(adv->tower_s[5], adv->tower_t[5], sfTrue);
     sfSprite_setScale(adv->tower_s[5], (sfVector2f){0.1, 0.1});
-    sfSprite_setPosition(adv->tower_s[5], (sfVector2f) {1000, 20});
+    sfSprite_setPosition(adv->tower_s[5], (sfVector2f) {950, 20});
 }
 
 void set_bande2(adventure *adv, button *ptr)
 {
     adv->tower_t[6] = sfTexture_createFromFile("images/bande2.png", NULL);
     adv->tower_s[6] = sfSprite_create();
-    sfSprite_setTexture(adv->tower_s[5], adv->tower_t[6], sfTrue);
-    sfSprite_setScale(adv->tower_s[5], (sfVector2f){0.9, 0.9});
-    sfSprite_setPosition(adv->tower_s[5], (sfVector2f) {180, 20});
+    sfSprite_setTexture(adv->tower_s[6], adv->tower_t[6], sfTrue);
+    sfSprite_setScale(adv->tower_s[6], (sfVector2f){0.9, 0.9});
+    sfSprite_setPosition(adv->tower_s[6], (sfVector2f) {180, 20});
 }
 
 void set_coin(adventure *adv, button *ptr)

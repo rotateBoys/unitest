@@ -15,6 +15,11 @@ int map1_body(adventure *adv, button *ptr)
     char **file = image_homme();
 
     set_mission(adv, ptr);
+    set_bande(adv, ptr);
+    set_tower1(adv, ptr);
+    set_tower2(adv, ptr);
+    set_tower3(adv, ptr);
+    set_tower4(adv, ptr);
     //set_m_text1(ptr);
     //set_m_text2(ptr);
     //set_music_g1(adv);

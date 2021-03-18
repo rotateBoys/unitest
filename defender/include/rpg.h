@@ -31,6 +31,8 @@ struct t_adventure
     perso *perso2;
     sfClock *clock;
     sfTime time;
+    sfSprite *tower_s[20];
+    sfTexture *tower_t[20];
     sfSprite *back_s[8];
     sfTexture *back_t[8];
     sfSprite *bouton_s[10];
@@ -181,5 +183,10 @@ void move(adventure *com, float *x, float *y);
 void move1(adventure *com, float *x, float *y);
 void move2(adventure *com, float *x, float *y);
 void move3(adventure *com, float *x, float *y);
+void set_bande(adventure *adv, button *ptr);
+void set_tower1(adventure *adv, button *ptr);
+void set_tower2(adventure *adv, button *ptr);
+void set_tower3(adventure *adv, button *ptr);
+void set_tower4(adventure *adv, button *ptr);
 
 #endif /*!MY_RPG*/

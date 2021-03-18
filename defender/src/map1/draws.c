@@ -91,5 +91,5 @@ void move1(adventure *adv, float *x, float *y)
      }*/
     //0 / 302;
     //x = 846.047852 & y = 301.480011
-    printf("x = %f & y = %f\n", *x, *y);
+  //  printf("x = %f & y = %f\n", *x, *y);
 }

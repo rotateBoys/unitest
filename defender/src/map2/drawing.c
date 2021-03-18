@@ -16,7 +16,7 @@ void m2_draw(adventure *adv, button *ptr)
     sfRenderWindow_drawSprite(adv->window, adv->point_s, NULL);
 }
 
-void move2(adventure *adv, float *x, float *y)
+void move2(adventure *adv, float *x, float *y, float a)
 {
-    *x += 0.52;
+    *x += a;
 }

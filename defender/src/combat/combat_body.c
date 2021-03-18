@@ -28,6 +28,7 @@ int combat_body(adventure *adv, button *ptr)
             //      combat_cursor(x, y, adv, ptr);
         }
         draw_c(adv, ptr);
+        running(adv, &i, w, z);
         /* if (w < 965.0) { */
         /*     running(adv, &i, w, z); */
         /*     //running(adv, &i, n, m); */
@@ -35,7 +36,7 @@ int combat_body(adventure *adv, button *ptr)
         /*       running(adv, &i, n, m); */
         /* //move3(adv, &w, &z); */
         /* //move2(adv, &n, &m); */
-        /* sfRenderWindow_display(adv->window); */
+        sfRenderWindow_display(adv->window);
     }
     return (0);
 }

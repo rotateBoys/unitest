@@ -9,6 +9,7 @@
 
 void set_aventure(adventure *adv, button *ptr)
 {
+    adv->clock = sfClock_create();
     adv->back_t[5] = sfTexture_createFromFile("images/map4.jpg", NULL);
     adv->back_s[5] = sfSprite_create();
     sfSprite_setTexture(adv->back_s[5], adv->back_t[5], sfTrue);

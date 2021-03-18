@@ -10,7 +10,7 @@
 int map2_body(adventure *adv, button *ptr)
 {
     int i = 0;
-    float x, y, w = 0, z = 50, n = 0, m = 480.0, k = 260.0, p = 150.0;
+    float x, y, w = 0, z = 50, n = 0, m = 480.0, k = 260.0, p = 150.0, a = 0.6;
     sfEvent event;
 
     set_map2(adv, ptr);
@@ -34,8 +34,8 @@ int map2_body(adventure *adv, button *ptr)
             running(adv, &i, n, m);
         } if (p < 965.0)
               running(adv, &i, p, k);
-        move2(adv, &n, &m);
-        move2(adv, &p, &m);
+        move2(adv, &n, &m, a);
+        move2(adv, &p, &m, a);
         //move3(adv, &w, &z);
         //running(adv, adv->time);
         sfRenderWindow_display(adv->window);

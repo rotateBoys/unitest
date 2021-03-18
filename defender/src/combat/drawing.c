@@ -17,7 +17,7 @@ void draw_c(adventure *adv, button *ptr)
 }
 
 
-void move3(adventure *adv, float *x, float *y)
+void move3(adventure *adv, float *x, float *y, float a)
 {
     *x += 0.52;
 }

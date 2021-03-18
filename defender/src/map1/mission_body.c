@@ -10,9 +10,8 @@
 int map1_body(adventure *adv, button *ptr)
 {
     int i = 0;
-    float x, y, w = 82, z = 0, n = 0, m = 302.0;
+    float x, y, w = 82, z = 0, n = 0, m = 302.0, a = 0.6;
     sfEvent event;
-    char **file = image_homme();
 
     set_mission(adv, ptr);
     set_bande(adv, ptr);
@@ -36,8 +35,8 @@ int map1_body(adventure *adv, button *ptr)
             running(adv, &i, w, z);
         if (n < 965.0)
             running(adv, &i, n, m);
-        move(adv, &n, &m);
-        move1(adv, &w, &z);
+        move(adv, &n, &m, a);
+        move1(adv, &w, &z, a);
         sfRenderWindow_display(adv->window);
     }
     return (0);

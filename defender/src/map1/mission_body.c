@@ -19,6 +19,9 @@ int map1_body(adventure *adv, button *ptr)
     set_tower2(adv, ptr);
     set_tower3(adv, ptr);
     set_tower4(adv, ptr);
+    set_pause(adv, ptr);
+    set_bande2(adv, ptr);
+    set_coin(adv, ptr);
     //set_m_text1(ptr);
     //set_m_text2(ptr);
     //set_music_g1(adv);

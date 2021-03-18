@@ -16,6 +16,9 @@ void m_draw(adventure *adv, button *ptr)
     sfRenderWindow_drawSprite(adv->window, adv->tower_s[2], NULL);
     sfRenderWindow_drawSprite(adv->window, adv->tower_s[3], NULL);
     sfRenderWindow_drawSprite(adv->window, adv->tower_s[4], NULL);
+    sfRenderWindow_drawSprite(adv->window, adv->tower_s[5], NULL);
+    sfRenderWindow_drawSprite(adv->window, adv->tower_s[6], NULL);
+    sfRenderWindow_drawSprite(adv->window, adv->tower_s[7], NULL);
     //sfRenderWindow_drawText(adv->window, ptr->m_text[0], NULL);
     //sfRenderWindow_drawText(adv->window, ptr->m_text[1], NULL);
     sfRenderWindow_drawSprite(adv->window, adv->point_s, NULL);

@@ -188,5 +188,8 @@ void set_tower1(adventure *adv, button *ptr);
 void set_tower2(adventure *adv, button *ptr);
 void set_tower3(adventure *adv, button *ptr);
 void set_tower4(adventure *adv, button *ptr);
+void set_pause(adventure *adv, button *ptr);
+void set_bande2(adventure *adv, button *ptr);
+void set_coin(adventure *adv, button *ptr);
 
 #endif /*!MY_RPG*/

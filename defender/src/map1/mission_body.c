@@ -9,7 +9,7 @@
 
 int map1_body(adventure *adv, button *ptr)
 {
-    int i = 0;
+    int i = 0, j = 0, k = 0, g = 1;
     float x, y, w = 82, z = 0, n = 0, m = 302.0, a = 0.6;
     sfEvent event;
 
@@ -34,12 +34,21 @@ int map1_body(adventure *adv, button *ptr)
             }
             sfSprite_setPosition(adv->point_s, (sfVector2f){x, y});
         } m_draw(adv, ptr);
-        if (w < 965.0)
-            running(adv, &i, w, z);
-        if (n < 965.0)
-            running(adv, &i, n, m);
-        move(adv, &n, &m, a);
-        move1(adv, &w, &z, a);
+        printf("g = %d\n", g);
+        //printf("x = %f & y = %f\n", x, y);
+        if (g != 0) {
+            if (press(adv, (sfVector2f) {950, 20}, 100, 100) == 1)
+                g = 0;
+            if (w < 965.0) {
+                life(adv, &j, w, z - 20);
+                running(adv, &i, w, z);
+            } if (n < 965.0) {
+                life(adv, &k, n, m - 20);
+                running(adv, &i, n, m);
+            } move(adv, &n, &m, a);
+            move1(adv, &w, &z, a);
+        } if (press(adv, (sfVector2f) {950, 20}, 100, 100) == 1)
+              g = 1;
         sfRenderWindow_display(adv->window);
     }
     return (0);

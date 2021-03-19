@@ -192,4 +192,7 @@ void set_pause(adventure *adv, button *ptr);
 void set_bande2(adventure *adv, button *ptr);
 void set_coin(adventure *adv, button *ptr);
 
+char **image_life(void);
+void life(adventure *com, int *i, float x, float y);
+
 #endif /*!MY_RPG*/

@@ -1,1 +1,1 @@
-comment tu mets les truc sur la meme ligne??
+bro l'affichage des pokemon doit etre fait en odre alphab{tique
